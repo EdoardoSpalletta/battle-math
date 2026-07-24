@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.battlemath.MainActivity">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        
+        
+        <TextView
+            android:id="@+id/TextViewWeaponSize"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/weapon_size"
+            app:layout_constraintEnd_toStartOf="@+id/editTextWeaponSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45" />
+        
+        <EditText
+            android:id="@+id/editTextWeaponSize"
+            style="@style/textAutosizingSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/weapon_size"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/TextViewWeaponSize"
+            app:layout_constraintTop_toTopOf="@+id/TextViewWeaponSize"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="Autofill" />
+        
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:tooltipText="For SRM/RF weapons, equals shot count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextWeaponSize"
+            app:layout_constraintTop_toTopOf="@+id/editTextWeaponSize"
+            app:layout_constraintWidth_percent="0.25"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            tools:ignore="ContentDescription" />
+        
+        <TextView
+            android:id="@+id/TextViewGroupingSize"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/grouping_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewWeaponSize"
+            app:layout_constraintWidth_percent="0.45" />
+        
+        <EditText
+            android:id="@+id/editTextNumberGrouping"
+            style="@style/textAutosizingSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/grouping_size"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/TextViewGroupingSize"
+            app:layout_constraintTop_toTopOf="@+id/TextViewGroupingSize"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="Autofill" />
+        
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:tooltipText="For SRM/RF weapons, set to 1. Multiply damage by single-shot DV"
+            app:layout_constraintStart_toEndOf="@+id/editTextNumberGrouping"
+            app:layout_constraintTop_toTopOf="@+id/editTextNumberGrouping"
+            app:layout_constraintWidth_percent="0.25"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            tools:ignore="ContentDescription" />
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroupSideHit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupSideHit"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberGrouping">
+            
+            <TextView
+                android:id="@+id/TextView12"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leftV2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView2"
+                app:layout_constraintStart_toStartOf="parent" />
+            
+            <TextView
+                android:id="@+id/TextView2"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/center"
+                
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView3"
+                app:layout_constraintStart_toEndOf="@+id/TextView12" />
+            
+            <TextView
+                android:id="@+id/TextView3"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5sp"
+                android:text="@string/right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView4"
+                app:layout_constraintStart_toEndOf="@+id/TextView2"
+                tools:ignore="RtlSymmetry" />
+            
+            <TextView
+                android:id="@+id/TextView4"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/TextView3" />
+        
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <TextView
+            android:id="@+id/TextViewSideHit"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="10dp"
+            android:text="@string/side_hit"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroupSideHit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+            app:layout_constraintWidth_percent="0.3" />
+        
+        <RadioGroup
+            android:id="@+id/radioGroupSideHit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/TextViewSideHit"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintWidth_percent="0.7">
+            
+            <RadioButton
+                android:id="@+id/radioButtonL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textColor="@android:color/transparent"
+                android:textSize="0px" />
+            
+            <RadioButton
+                android:id="@+id/radioButtonC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+            
+            <RadioButton
+                android:id="@+id/radioButtonR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:text="@string/_3"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+            
+            <RadioButton
+                android:id="@+id/radioButtonRR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:text="@string/_4"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+        
+        </RadioGroup>
+        
+        <TextView
+            android:id="@+id/textViewClusterWeapon"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/cluster_weapon"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxCluster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxCluster"
+            app:layout_constraintWidth_percent="0.5" />
+        
+        <CheckBox
+            android:id="@+id/checkBoxCluster"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewClusterWeapon"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewSideHit"
+            app:layout_constraintWidth_percent="0.12" />
+        
+        <EditText
+            android:id="@+id/editTextClusterDmg"
+            style="@style/textAutosizingSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="@string/dmg_per_shot"
+            android:inputType="number"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxCluster"
+            app:layout_constraintTop_toTopOf="@+id/textViewClusterWeapon"
+            app:layout_constraintWidth_percent="0.38"
+            tools:ignore="Autofill" />
+        
+        
+        <TextView
+            android:id="@+id/TextViewClusterMod"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/grouping_modifier"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewClusterWeapon"
+            app:layout_constraintWidth_percent="0.5" />
+        
+        <EditText
+            android:id="@+id/editTextNumberGroupingMod"
+            style="@style/textAutosizingSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:hint="@string/modifier"
+            android:inputType="numberSigned"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/TextViewClusterMod"
+            app:layout_constraintStart_toEndOf="@+id/TextViewClusterMod"
+            app:layout_constraintTop_toTopOf="@+id/TextViewClusterMod"
+            app:layout_constraintVertical_bias="0.51"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="Autofill" />
+        
+        <ImageView
+            android:id="@+id/imageViewHelperGrouping"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:tooltipText="+2 for ArtemisIV/NARC, -4 with AMS, blank otherwise"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextNumberGroupingMod"
+            app:layout_constraintStart_toEndOf="@+id/editTextNumberGroupingMod"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxCluster"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            tools:ignore="ContentDescription" />
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewClusterMod">
+            
+            <TextView
+                android:id="@+id/TextViewMech"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mech"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextVehicle"
+                app:layout_constraintStart_toStartOf="parent" />
+            
+            <TextView
+                android:id="@+id/TextVehicle"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/TextViewMech" />
+        
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/textAutosizingMain"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:paddingBottom="10dp"
+            android:text="@string/target"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintVertical_bias="0.0" />
+        
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintWidth_percent="0.6">
+            
+            <RadioButton
+                android:id="@+id/radioButtonMech"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:text="@string/_1"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+            
+            <RadioButton
+                android:id="@+id/radioButtonVehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:text="@string/_2"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+        </RadioGroup>
+        
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/go"
+            android:textColor="@color/black"
+            android:theme="@style/CustomButtonStyle"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        
+        <TextView
+            android:id="@+id/textViewOutputCluster"
+            style="@style/textAutosizingSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cluster"
+            android:textColor="#7F7F7F"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/submitButton"
+            app:layout_constraintTop_toBottomOf="@+id/submitButton" />
+        
+        <ImageView
+            android:id="@+id/imageViewCleanInput"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:src="@drawable/clear_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/submitButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/submitButton" />
+        
+        <ImageView
+            android:id="@+id/imageViewWeapons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-30dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOutputCluster"
+            app:srcCompat="@drawable/weapons" />
+        
+        
+        
+        <FrameLayout
+            android:id="@+id/frameLayoutMech"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewOutputCluster">
+            
+            <ImageView
+                android:id="@+id/imageViewMech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                app:srcCompat="@drawable/mech_v2"
+                tools:ignore="ContentDescription" />
+            
+            <TextView
+                android:id="@+id/textViewOutputCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_black"
+                android:gravity="center"
+                android:text="@string/critici"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <TextView
+                android:id="@+id/textViewOutputCTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ct" />
+            
+            <TextView
+                android:id="@+id/textViewOutputLADmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/la"
+                android:textAlignment="center" />
+            
+            <TextView
+                android:id="@+id/textViewOutputLTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lt" />
+            
+            <TextView
+                android:id="@+id/textViewOutputRTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rt" />
+            
+            <TextView
+                android:id="@+id/textViewOutputLLDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ll" />
+            
+            <TextView
+                android:id="@+id/textViewOutputRLDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rl" />
+            
+            
+            <TextView
+                android:id="@+id/textViewOutputRADmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ra" />
+            
+            <TextView
+                android:id="@+id/textViewOutputHDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hd"
+                android:textColor="@color/design_default_color_error" />
+        
+        
+        </FrameLayout>
+        
+        <FrameLayout
+            android:id="@+id/frameLayoutVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewOutputCluster">
+            
+            
+            <ImageView
+                android:id="@+id/imageViewVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewOutputCritVSysMotive"
+                app:srcCompat="@drawable/tank"
+                tools:ignore="ContentDescription" />
+            
+            <TextView
+                android:id="@+id/textViewOutputCritV"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/critical_side"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/textViewOutputCritVTurret"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/critical_turret"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/textViewOutputCritVSysMotive"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/motive_system_dmg"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/textViewOutputTUDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tu" />
+            
+            <TextView
+                android:id="@+id/textViewOutputLSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ls" />
+            
+            <TextView
+                android:id="@+id/textViewOutputRSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs" />
+            
+            <TextView
+                android:id="@+id/textViewOutputRRSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rr"
+                android:textColor="@color/design_default_color_error" />
+            
+            <TextView
+                android:id="@+id/textViewOutputFRTdmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fr" />
+        
+        </FrameLayout>
+        
+ 
+    
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

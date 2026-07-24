@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.battlemath.ActivityWeaponList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+      
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/TextView12"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leftV2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/TextView2"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/center"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView3"
+                app:layout_constraintStart_toEndOf="@+id/TextView12" />
+
+            <TextView
+                android:id="@+id/TextView3"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5sp"
+                android:text="@string/right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextView4"
+                app:layout_constraintStart_toEndOf="@+id/TextView2" />
+
+            <TextView
+                android:id="@+id/TextView4"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/TextView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/TextView1"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/side_hit"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/TextView1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintWidth_percent="0.7">
+
+            <RadioButton
+                android:id="@+id/radioButtonL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textColor="@android:color/transparent"
+                android:textSize="0px" />
+
+            <RadioButton
+                android:id="@+id/radioButtonC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:text="@string/_3"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonRR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorButtonEnabled"
+                android:text="@string/_4"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/target"
+            app:layout_constraintEnd_toEndOf="@+id/TextView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TextView1"
+            app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintWidth_percent="0.5">
+
+            <RadioButton
+                android:id="@+id/radioButtonMech"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:text="@string/_1"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonVehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:text="@string/_2"
+                android:textColor="@android:color/transparent"
+                android:textSize="0sp" />
+        </RadioGroup>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-12dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+            app:layout_constraintStart_toEndOf="@+id/textView5">
+
+            <TextView
+                android:id="@+id/TextViewMech"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mech"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TextVehicle"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/TextVehicle"
+                style="@style/textRadiobuttonSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/TextViewMech" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <TextView
+            android:id="@+id/TextViewClusterMod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="none"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:text="@string/grouping_modifier"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintWidth_percent="0.4" />
+        
+        <EditText
+            android:id="@+id/editTextNumberGrouping"
+            style="@style/textAutosizingSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:hint="@string/modifier"
+            android:inputType="numberSigned"
+            app:layout_constraintStart_toEndOf="@+id/TextViewClusterMod"
+            app:layout_constraintBaseline_toBaselineOf="@+id/TextViewClusterMod"
+            app:layout_constraintWidth_percent="0.3"
+            tools:ignore="Autofill" />
+
+        <ImageView
+            android:id="@+id/imageViewHelperGrouping"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+
+            android:tooltipText="+2 for ArtemisIV/NARC, -4 with AMS, blank otherwise"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextNumberGrouping"
+            app:layout_constraintStart_toEndOf="@+id/editTextNumberGrouping"
+            app:layout_constraintTop_toTopOf="@+id/editTextNumberGrouping"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewOutputCluster"
+            style="@style/textAutosizingSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingStart="5dp"
+            android:text="@string/cluster"
+            android:textColor="#7F7F7F"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/TextViewClusterMod"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberGrouping" />
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/textAutosizingTitle"
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:text="@string/tap_to_fire"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOutputCluster" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <Button
+                android:id="@+id/buttonSRM2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/srm2"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSRM4"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonSRM4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/srm4"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSRM6"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonSRM2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonSRM6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/srm6"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLBX"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonSRM4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonLBX"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/lbx"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editTextLBXsize"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonSRM6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextLBXsize"
+                style="@style/textAutosizingSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-4dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/size"
+                android:inputType="number"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.66"
+                app:layout_constraintStart_toEndOf="@+id/buttonLBX"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutLRM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <Button
+                android:id="@+id/buttonLRM5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/lrm5"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLRM10"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonLRM10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/lrm10"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLRM15"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonLRM5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonLRM15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/lrm15"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLRM20"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonLRM10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonLRM20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="@string/lrm20"
+                android:textColor="@color/black"
+                android:theme="@style/ButtonWeaponSelection"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/buttonLRM15"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageViewWeapons"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutLRM"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/weapons" />
+        
+        <FrameLayout
+            android:id="@+id/frameLayoutVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutLRM">
+
+
+            <ImageView
+                android:id="@+id/imageViewVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewOutputCritVSysMotive"
+                app:srcCompat="@drawable/tank"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewOutputCritV"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/critical_side"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewOutputCritVTurret"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/critical_turret"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/textViewOutputCritVSysMotive"
+                style="@style/TextDisplayCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/motive_system_dmg"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewOutputTUDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tu" />
+
+            <TextView
+                android:id="@+id/textViewOutputLSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ls" />
+
+            <TextView
+                android:id="@+id/textViewOutputRSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs" />
+
+            <TextView
+                android:id="@+id/textViewOutputRRSDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rr"
+                android:textColor="@color/design_default_color_error" />
+
+            <TextView
+                android:id="@+id/textViewOutputFRTdmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fr" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayoutMech"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutLRM">
+
+            <ImageView
+                android:id="@+id/imageViewMech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                app:srcCompat="@drawable/mech_v2"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewOutputCrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_black"
+                android:gravity="center"
+                android:text="@string/critici"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewOutputCTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ct" />
+
+            <TextView
+                android:id="@+id/textViewOutputLADmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/la"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textViewOutputLTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lt" />
+
+            <TextView
+                android:id="@+id/textViewOutputRTDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rt" />
+
+            <TextView
+                android:id="@+id/textViewOutputLLDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ll" />
+
+            <TextView
+                android:id="@+id/textViewOutputRLDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rl" />
+
+
+            <TextView
+                android:id="@+id/textViewOutputRADmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ra" />
+
+            <TextView
+                android:id="@+id/textViewOutputHDmg"
+                style="@style/TextDisplayDamage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hd"
+                android:textColor="@color/design_default_color_error" />
+
+
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

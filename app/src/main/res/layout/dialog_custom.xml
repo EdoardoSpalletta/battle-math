@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    >
+
+    <!-- LinearLayout per il contenuto del dialogo -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="16dp"> <!-- Padding per dare un po' di spazio tra gli elementi -->
+
+<!-- Testo che appare nel dialogo -->
+<TextView
+    android:id="@+id/textViewMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:justificationMode="inter_word"
+    android:lineSpacingExtra="2dp"
+    android:text="@string/thx_msg"
+    style="@style/textCardDonation"
+    android:gravity="center"
+    android:textColor="#000000" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+android:layout_marginTop="16dp">
+
+<Button
+    android:id="@+id/btnDonate"
+    android:theme="@style/CustomButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/montserrat_black"
+    android:textColor="@color/black"
+    android:text="Donate"
+    android:layout_marginEnd="26dp"/>
+
+<Button
+    android:id="@+id/btnCancel"
+    android:theme="@style/CustomButtonStyle"
+    android:fontFamily="@font/montserrat_black"
+    android:layout_width="wrap_content"
+    android:textColor="@color/black"
+    android:layout_marginStart="26dp"
+    android:layout_height="wrap_content"
+    android:text="Cancel"/>
+</LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>

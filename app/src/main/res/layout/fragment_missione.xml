@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+    
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDefender">
+        
+        <TextView
+            android:id="@+id/labelTeamDef"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:text="@string/vp_defender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vpDefMinus"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+        
+        <Button
+            android:id="@+id/vpDefMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:text="@string/minus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textPvDef"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/labelTeamDef"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:id="@+id/textPvDef"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center"
+            android:text="@string/_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vpDefPlus"
+            app:layout_constraintHorizontal_weight="0.6"
+            app:layout_constraintStart_toEndOf="@+id/vpDefMinus"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <Button
+            android:id="@+id/vpDefPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:text="@string/plus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/textPvDef"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMissione">
+        
+        <TextView
+            android:id="@+id/turnNumber"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:text="@string/turn_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonMinusTurn"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <Button
+            android:id="@+id/buttonMinusTurn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:text="@string/minus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/turnNumValue"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/turnNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:id="@+id/turnNumValue"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center"
+            android:text="@string/_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPlusTurn"
+            app:layout_constraintHorizontal_weight="0.8"
+            app:layout_constraintStart_toEndOf="@+id/buttonMinusTurn"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <Button
+            android:id="@+id/buttonPlusTurn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:text="@string/plus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/turnNumValue"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    
+    <TextView
+        android:id="@+id/textViewMissione"
+        style="@style/textAutosizingMain"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/steiner"
+        android:text="@string/mission_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    
+    <TextView
+        android:id="@+id/labelDefender"
+        style="@style/textAutosizingMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:paddingEnd="8dp"
+        android:text="@string/defender"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+    
+    <EditText
+        android:id="@+id/editDefender"
+        style="@style/textAutosizingMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:gravity="center"
+        android:hint="@string/defender_team_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelDefender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelDefender" />
+    
+    <EditText
+        android:id="@+id/editAttacker"
+        style="@style/textAutosizingMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:gravity="center"
+        android:hint="@string/attacker_team_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelAttacker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelAttacker" />
+    
+    <TextView
+        android:id="@+id/labelAttacker"
+        style="@style/textAutosizingMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:paddingEnd="8dp"
+        android:text="@string/attacker"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/labelDefender"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutVpAtk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelAttacker">
+        
+        <TextView
+            android:id="@+id/labelTeamAtk"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:text="@string/vp_attacker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vpAtkMinus"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        
+        <Button
+            android:id="@+id/vpAtkMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:text="@string/minus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textPvAtk"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/labelTeamAtk"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:id="@+id/textPvAtk"
+            style="@style/textAutosizingMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_black"
+            android:gravity="center"
+            android:text="@string/_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vpAtkPlus"
+            app:layout_constraintHorizontal_weight="0.6"
+            app:layout_constraintStart_toEndOf="@+id/vpAtkMinus"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <Button
+            android:id="@+id/vpAtkPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:text="@string/plus"
+            android:textColor="@color/black"
+            android:theme="@style/ButtonWeaponSelection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.33"
+            app:layout_constraintStart_toEndOf="@+id/textPvAtk"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <ImageView
+        android:id="@+id/imageViewCleanInput"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        android:src="@drawable/clear_icon"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayoutVpAtk"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutVpAtk" />
+    
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+		android:contentDescription="@string/wallpaper"
+		app:layout_constraintBottom_toTopOf="@id/textViewVersion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCleanInput"
+        app:layout_constraintVertical_bias="0.0"
+        />
+    
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        style="@style/textAutosizingMain"
+        android:text="@string/sound"
+        android:paddingEnd="5dp"
+        
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCleanInput"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCleanInput" />
+    
+
+    
+    <TextView
+        android:id="@+id/textViewVersion"
+        style="@style/textAutosizingSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BattleMath v"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
