@@ -2,6 +2,7 @@
 ![Android](https://img.shields.io/badge/platform-Android-green)
 ![Java](https://img.shields.io/badge/language-Java-orange)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+
 Android companion application developed in Java to support tabletop gaming sessions.
 
 BattleMath provides digital tools to simplify gameplay operations, automate complex calculations and improve the speed and accuracy of tabletop battles.

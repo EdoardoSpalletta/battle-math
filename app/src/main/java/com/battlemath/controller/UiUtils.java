@@ -210,20 +210,6 @@ public class UiUtils {
         }
     }
 
-    public static void navigateToWeaponList(Activity activity, ImageView imageViewWeapons) {
-        imageViewWeapons.setVisibility(View.GONE);
-        Intent intent = new Intent(activity, ActivityWeaponList.class);
-        activity.startActivity(intent);
-    }
-
-    public static void toggleVisibility(View view, boolean isVisible) {
-        if (isVisible) {
-            view.setVisibility(View.VISIBLE);
-        } else {
-            view.setVisibility(View.GONE);
-        }
-    }
-
     public static int getSelectedRadioButtonId(Context context, RadioGroup selected, String tag) {
         int selectedId = selected.getCheckedRadioButtonId();
         if (selectedId != -1) {
