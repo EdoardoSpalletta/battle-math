@@ -1,5 +1,7 @@
 # BattleMath
-
+![Android](https://img.shields.io/badge/platform-Android-green)
+![Java](https://img.shields.io/badge/language-Java-orange)
+![License](https://img.shields.io/badge/license-MIT-blue)
 Android companion application developed in Java to support tabletop gaming sessions.
 
 BattleMath provides digital tools to simplify gameplay operations, automate complex calculations and improve the speed and accuracy of tabletop battles.
@@ -108,10 +110,12 @@ The project involved:
 - Developing custom user interfaces.
 - Managing source code using Git.
 
-## Assets
+## Disclaimer
 
-Some images and sounds are third-party assets and may have their own licenses.
-They are not covered by the MIT License of this project.
+BattleMath is an unofficial fan-made project inspired by the BattleTech universe.
+BattleTech and related trademarks are property of their respective owners.
+Some assets included in this project (such as images, sounds or other media) may belong to their respective copyright holders and are not covered by this project's MIT License.
+This project is not affiliated with, endorsed by, or sponsored by the owners of the BattleTech intellectual property.
 
 ## License
 
