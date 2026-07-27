@@ -14,6 +14,19 @@
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:fontFamily">@font/steiner</item>
+        <item name="android:textColor">@color/app_title_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+    
+    <style name="textAutosizingPrincipal">
+        <item name="android:autoSizeMaxTextSize">100sp</item>
+        <item name="android:autoSizeMinTextSize">20sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:fontFamily">@font/steiner</item>
         <item name="android:gravity">center</item>
         <item name="android:lines">1</item>
         <item name="android:maxLines">1</item>
@@ -120,6 +133,7 @@
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:ellipsize">none</item>
         <item name="android:fontFamily">@font/montserrat_black</item>
+        <item name="android:textColor">@color/app_title_color</item>
         <item name="android:gravity">start|bottom</item>
         <item name="android:lines">1</item>
         <item name="android:maxLines">1</item>

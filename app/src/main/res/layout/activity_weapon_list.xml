@@ -275,7 +275,7 @@
 
         <TextView
             android:id="@+id/textView12"
-            style="@style/textAutosizingTitle"
+            style="@style/textAutosizingPrincipal"
             android:layout_width="0dp"
             android:layout_height="30sp"
             android:text="@string/tap_to_fire"

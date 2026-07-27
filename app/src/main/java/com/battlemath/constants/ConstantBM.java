@@ -10,7 +10,7 @@ public class ConstantBM {
     public final static int MODE_MECH = 1;
     public final static int MODE_TANK = 2;
     public final static String PAYPAL_URL = "https://www.paypal.com/paypalme/edospa";
-    public final static String APP_VERSION = "1.0";
+    public final static String APP_VERSION = "1.0.1";
 
 
     //Per posizione TextView danno Mech
