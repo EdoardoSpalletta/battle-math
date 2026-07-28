@@ -10,4 +10,6 @@
     <color name="colorBackgroundImage">#fffefe</color>
     <color name="colorBackgroundImageDT">#141218</color>
     <color name="app_title_color">#FF000000</color>
+    <color name="back_cancel">#ADA4A4</color>
+
 </resources>

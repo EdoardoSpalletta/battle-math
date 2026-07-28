@@ -79,4 +79,19 @@
     <string name="sound">Sound</string>
     <string name="wallpaper">wallpaper</string>
     <string name="vp_attacker">VP attacker</string>
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="about">About</string>
+    <string name="about_description"> A BattleTech companion app for tabletop game management. </string>
+    <string name="about_author"> Developed by Edoardo Spalletta </string>
+    <string name="version">Version </string>
+    <string name="mit_license">MIT License</string>
+    <string name="version_format">Version %1$s</string>
+    <string name="donate">Donate</string>
+    <string name="cancel">Cancel</string>
+    <string name="battlemath_v">BattleMath v</string>
+
 </resources>

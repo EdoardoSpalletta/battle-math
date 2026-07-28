@@ -30,9 +30,9 @@ import com.battlemath.utils.Utils;
 import com.battlemath.utils.audio.SequentialSoundPlayer;
 import com.battlemath.utils.audio.SoundManager;
 
-public class ArmaPersonalizzataFragment extends Fragment {
+public class CustomWeaponFragment extends Fragment {
 
-    private static final String TAG = "ArmaPersonalizzataFragment";
+    private static final String TAG = "CustomWeaponFragment";
     // --- UI Elements ---
     private EditText damageValue, groupingSize, inputClusterDmg, editTextNumberGroupingMod;
     private TextView textViewClusterMod;
@@ -46,7 +46,7 @@ public class ArmaPersonalizzataFragment extends Fragment {
     // --- Logic / Sounds ---
     private SequentialSoundPlayer soundPlayer;
 
-    public ArmaPersonalizzataFragment() {
+    public CustomWeaponFragment() {
     }
 
     @Nullable

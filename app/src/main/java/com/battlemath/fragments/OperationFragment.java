@@ -22,22 +22,20 @@ import com.battlemath.model.MissionViewModel;
 import com.battlemath.utils.audio.SoundManager;
 import com.battlemath.R;
 
-public class MissioneFragment extends Fragment {
+public class OperationFragment extends Fragment {
 
     private TextView textRound, textPvDef, textPvAtk, textViewVersion;
     private EditText editDefender, editAttacker;
     private ImageView imageViewCleanInput, imageView6;
     private MissionViewModel vm;
     private Button btnRoundMinus, btnRoundPlus, btnPvDefPlus, btnPvDefMinus, btnPvAtkPlus, btnPvAtkMinus;
-    private SwitchCompat switchSound;
-    private SharedPreferences prefs;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,  @Nullable ViewGroup container,  @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_operation, container, false);
         vm = new ViewModelProvider(requireActivity()).get(MissionViewModel.class);
-        prefs = requireContext().getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
         initViews(view);
         String version = textViewVersion.getText() + ConstantBM.APP_VERSION;
         textViewVersion.setText(version);
@@ -87,11 +85,6 @@ public class MissioneFragment extends Fragment {
             vm.atkPoints++;
             textPvAtk.setText(String.valueOf(vm.atkPoints));
         });
-        // Listener per Suono ON/OFF
-        switchSound.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            SoundManager.setIsMuted(!isChecked);
-            SoundManager.saveMuteState(requireContext(), !isChecked);
-        });
         imageView6.setImageResource(R.drawable.wallpaper);
     }
 
@@ -106,24 +99,7 @@ public class MissioneFragment extends Fragment {
         imageView6 = view.findViewById(R.id.imageView6);
         imageView6.setImageResource(R.drawable.wallpaper);
         textViewVersion = view.findViewById(R.id.textViewVersion);
-        // Carica lo stato del mute salvato
-        boolean isMuted = SoundManager.loadMuteState(requireContext());
-        SoundManager.setIsMuted(isMuted); // Aggiorna SoundManager
-        switchSound = view.findViewById(R.id.switchSound);
-        switchSound.setChecked(!isMuted); // Switch ON se audio attivo
-
-        // Listener per salvare subito i cambiamenti
-        switchSound.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            boolean mute = !isChecked;
-            SoundManager.setIsMuted(mute);
-            SoundManager.saveMuteState(requireContext(), mute);
-        });
-
-
         imageView6.setImageResource(R.drawable.wallpaper);
-
-
-
         btnRoundMinus = view.findViewById(R.id.buttonMinusTurn);
         btnRoundPlus = view.findViewById(R.id.buttonPlusTurn);
         btnPvDefPlus = view.findViewById(R.id.vpDefPlus);

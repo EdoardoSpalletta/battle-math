@@ -89,7 +89,6 @@ public class UiUtils {
 
     public static void setPositionTextView(ImageView imageView, TextView textView, float relativeX, float relativeY) {
         imageView.post(() -> {
-
             RectF drawableRect = getImageBounds(imageView);
             int marginTop = ((FrameLayout.LayoutParams) imageView.getLayoutParams()).topMargin;
             float xPosition = drawableRect.left + relativeX * drawableRect.width();
@@ -142,22 +141,29 @@ public class UiUtils {
 
     public static void showDonationDialog(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View dialogView = inflater.inflate(R.layout.dialog_custom, null);
+        View dialogView = inflater.inflate(R.layout.dialog_donate, null);
+
         Button btnDonate = dialogView.findViewById(R.id.btnDonate);
         Button btnCancel = dialogView.findViewById(R.id.btnCancel);
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setView(dialogView);
-        AlertDialog dialog = builder.create();
+
+        AlertDialog dialog = new AlertDialog.Builder(context)
+                .setView(dialogView)
+                .create();
 
         btnDonate.setOnClickListener(v -> {
-            Intent browserIntent = openPayPal();
-            context.startActivity(browserIntent);
+            context.startActivity(openPayPal());
             dialog.dismiss();
         });
 
         btnCancel.setOnClickListener(v -> dialog.dismiss());
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
+
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(
+                    new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+            dialog.getWindow().setDimAmount(0.80f);
+        }
     }
 
     private static Intent openPayPal() {

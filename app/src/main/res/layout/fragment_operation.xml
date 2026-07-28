@@ -292,8 +292,7 @@
         android:id="@+id/imageView6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-		android:contentDescription="@string/wallpaper"
-		app:layout_constraintBottom_toTopOf="@id/textViewVersion"
+        app:layout_constraintBottom_toTopOf="@id/textViewVersion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -301,27 +300,13 @@
         app:layout_constraintVertical_bias="0.0"
         />
     
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switchSound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        style="@style/textAutosizingMain"
-        android:text="@string/sound"
-        android:paddingEnd="5dp"
-        
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewCleanInput"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageViewCleanInput" />
-    
-
     
     <TextView
         android:id="@+id/textViewVersion"
-        style="@style/textAutosizingSmall"
+        style="@style/textAutosizingUltraSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BattleMath v"
+        android:text="@string/battlemath_v"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    
     <style name="CustomButtonStyle">
         <item name="android:backgroundTint">@color/colorButtonEnabled</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">10dp</item>
     </style>
-
+    
     <style name="textAutosizingTitle">
         <item name="android:autoSizeMaxTextSize">100sp</item>
         <item name="android:autoSizeMinTextSize">20sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:fontFamily">@font/steiner</item>
-        <item name="android:textColor">@color/app_title_color</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/app_title_color</item>
         <item name="android:lines">1</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">none</item>
@@ -32,8 +32,7 @@
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">none</item>
     </style>
-
-
+    
     <style name="textAutosizingSmall">
         <item name="android:textSize">11sp</item>
         <item name="android:lines">1</item>
@@ -45,9 +44,22 @@
         <item name="android:ellipsize">none</item>
         <item name="android:fontFamily">@font/montserrat_black</item>
         <item name="android:gravity">center</item>
-
     </style>
-
+    
+    <style name="textAutosizingUltraSmall">
+        <item name="android:textSize">8sp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeMaxTextSize">10sp</item>
+        <item name="android:autoSizeMinTextSize">4sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fontFamily">@font/montserrat_black</item>
+        <item name="android:gravity">center</item>
+    
+    </style>
+    
     <style name="textAutosizingMain">
         <item name="android:autoSizeMaxTextSize">20sp</item>
         <item name="android:autoSizeMinTextSize">12sp</item>
@@ -60,7 +72,19 @@
         <item name="android:maxLines">1</item>
         <item name="android:paddingStart">5dp</item>
     </style>
-
+    
+    <style name="textAutosizingMainSettings">
+        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:autoSizeMinTextSize">12sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fontFamily">@font/montserrat_black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+    
+    
     <style name="textCardDonation">
         <item name="android:autoSizeMaxTextSize">16sp</item>
         <item name="android:autoSizeMinTextSize">10sp</item>
@@ -68,7 +92,7 @@
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:fontFamily">@font/montserrat_black</item>
     </style>
-
+    
     <style name="textRadiobuttonSelection">
         <item name="android:autoSizeMaxTextSize">15sp</item>
         <item name="android:autoSizeMinTextSize">7sp</item>
@@ -81,14 +105,14 @@
         <item name="android:maxLines">1</item>
         <item name="android:singleLine">true</item>
     </style>
-
+    
     <style name="ButtonWeaponSelection" parent="Widget.AppCompat.Button">
         <!--Dallo stile generale dell'app -->
         <item name="android:backgroundTint">@color/colorButtonEnabled</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:padding">10dp</item>
         <!-- Dimensioni  -->
-
+        
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:gravity">center</item>
@@ -104,20 +128,20 @@
         <!-- Font -->
         <item name="android:fontFamily">@font/montserrat_black</item>
     </style>
-
+    
     <style name="TextDisplayDamage">
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
     </style>
-
+    
     <style name="TexInvisible">
         <item name="android:textSize">0sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@android:color/transparent</item>
     </style>
-
+    
     <style name="TextDisplayCrit">
         <item name="android:fontFamily">@font/montserrat_black</item>
         <item name="android:gravity">center</item>
@@ -125,19 +149,30 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/design_default_color_error</item>
     </style>
-
+    
     <style name="TextAuthor">
         <item name="android:autoSizeMaxTextSize">13sp</item>
         <item name="android:autoSizeMinTextSize">6sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:ellipsize">none</item>
-        <item name="android:fontFamily">@font/montserrat_black</item>
         <item name="android:textColor">@color/app_title_color</item>
+        <item name="android:fontFamily">@font/montserrat_black</item>
         <item name="android:gravity">start|bottom</item>
         <item name="android:lines">1</item>
         <item name="android:maxLines">1</item>
         <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="TextDescr">
+        <item name="android:autoSizeMaxTextSize">13sp</item>
+        <item name="android:autoSizeMinTextSize">6sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">@color/app_title_color</item>
+        <item name="android:fontFamily">@font/montserrat_black</item>
+        <item name="android:gravity">start|bottom</item>
     </style>
 
 </resources>

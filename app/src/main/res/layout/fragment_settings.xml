@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp">
+		
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/settings"
+			android:fontFamily="@font/steiner"
+			style="@style/textAutosizingMainSettings"
+			android:textSize="30sp"
+			android:paddingBottom="12dp"/>
+		
+		
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/switchSound"
+			style="@style/textAutosizingMain"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/montserrat_black"
+			android:text="@string/sound"/>
+		
+
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="3dp"
+			android:layout_marginTop="18dp"
+			android:layout_marginBottom="8dp"
+			android:background="@color/yellowish"/>
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/theme"
+			android:fontFamily="@font/steiner"
+			
+			style="@style/textAutosizingMainSettings"
+			android:textSize="22sp"
+			android:paddingTop="24dp"/>
+		
+		
+		<RadioGroup
+			android:id="@+id/themeGroup"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+			
+			<RadioButton
+				android:id="@+id/themeSystem"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/theme_system"
+				android:textSize="16sp"
+				android:fontFamily="@font/montserrat_black"
+				/>
+			
+			
+			<RadioButton
+				android:id="@+id/themeLight"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/theme_light"
+				android:textSize="16sp"
+				android:fontFamily="@font/montserrat_black"
+				
+				/>
+			
+			<RadioButton
+				android:id="@+id/themeDark"
+				android:fontFamily="@font/montserrat_black"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/theme_dark"/>
+		</RadioGroup>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="3dp"
+			android:layout_marginTop="18dp"
+			android:layout_marginBottom="8dp"
+			android:background="@color/yellowish"
+			
+			/>
+		
+		
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/about"
+			style="@style/textAutosizingMainSettings"
+			android:textSize="20sp"
+			android:paddingTop="8dp"/>
+		
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			style="@style/textAutosizingMainSettings"
+			android:textSize="26sp"
+			android:fontFamily="@font/steiner"
+			android:text="@string/app_name"
+			/>
+		
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			style="@style/textAutosizingMainSettings"
+			android:text="@string/about_description"
+			android:textSize="14sp" />
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="@string/about_author"
+			style="@style/textAutosizingMainSettings"
+			
+			android:textSize="12sp"/>
+		
+		<TextView
+			android:id="@+id/textAppVersion"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			style="@style/textAutosizingMainSettings"
+			android:textSize="12sp"/>
+		
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			style="@style/textAutosizingMainSettings"
+			android:text="@string/mit_license"
+			android:textSize="12sp"/>
+	
+	</LinearLayout>
+
+</ScrollView>

@@ -30,25 +30,34 @@
             style="@style/textAutosizingTitle"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:paddingTop="5dp"
             android:text="@string/app_name"
             android:gravity="center"
             app:layout_constraintStart_toEndOf="@id/buttonDonate"
-            app:layout_constraintEnd_toStartOf="@id/view3"
+            app:layout_constraintEnd_toStartOf="@id/buttonSettings"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="0.77" />
+            app:layout_constraintHorizontal_weight="0.70" />
         
-        <TextView
-            android:id="@+id/view3"
-            style="@style/TextAuthor"
+        
+        <ImageView
+            android:id="@+id/buttonSettings"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:text="@string/author"
+            android:importantForAccessibility="no"
+            android:padding="2dp"
+            android:contentDescription="@string/settings"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/baseline_settings_24"
             app:layout_constraintStart_toEndOf="@id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="0.13" />
+            app:layout_constraintHorizontal_weight="0.15" />
+    
+    
+    
     </androidx.constraintlayout.widget.ConstraintLayout>
     
     <!-- Container dei fragment -->
