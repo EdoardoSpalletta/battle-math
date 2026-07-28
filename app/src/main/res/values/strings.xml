@@ -93,5 +93,6 @@
     <string name="donate">Donate</string>
     <string name="cancel">Cancel</string>
     <string name="battlemath_v">BattleMath v</string>
+    <string name="todo">TODO</string>
 
 </resources>

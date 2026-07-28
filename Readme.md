@@ -5,9 +5,13 @@
 
 Android companion application developed in Java to support tabletop gaming sessions.
 
-BattleMath provides digital tools to simplify gameplay operations, automate complex calculations and improve the speed and accuracy of tabletop battles.
+BattleMath provides digital tools to streamline tabletop gaming sessions by automating complex calculations, tracking match progress and improving the speed and accuracy of gameplay.
 
 The application was designed and developed independently, including application architecture, business logic, Android UI development and source code management.
+
+## Demo
+
+![BattleMath Demo](screenshots/battlemath-demo.gif)
 
 ## Features
 
@@ -15,7 +19,6 @@ The application was designed and developed independently, including application 
 
 - Track game turns and victory points.
 - Configure attacker and defender teams.
-- Enable or disable application sounds.
 
 ### Weapon Simulation
 
@@ -36,32 +39,55 @@ The application was designed and developed independently, including application 
 
 - Weapon-specific sound effects.
 
+### Settings
+
+- Switch between Light and Dark theme.
+- Enable or disable application sounds.
+- Configure application preferences.
+
 ## Screenshots
 Main application screens showing game management, automatic weapon calculation and custom weapon configuration.
 
 <table>
   <tr>
     <td align="center" valign="top">
-      <img src="screenshots/operation-management.png" width="260"/>
-      <br/>
+      <img src="screenshots/operation-management.png" width="240">
+      <br>
       <strong>Operation Management</strong>
-      <br/>
-      Manage teams, game-turns and victory points during a game session.
+      <br>
+      Manage teams, game turns and victory points during a game session.
     </td>
     <td align="center" valign="top">
-      <img src="screenshots/weapon-calculation.png" width="260"/>
-      <br/>
+      <img src="screenshots/weapon-calculation.png" width="240">
+      <br>
       <strong>Weapon Calculation</strong>
-      <br/>
+      <br>
       Automatic weapon simulation with hit location, damage and critical hit calculation.
     </td>
     <td align="center" valign="top">
-      <img src="screenshots/custom-weapon.png" width="260"/>
-      <br/>
+      <img src="screenshots/weapon-calculation-dark.png" width="240">
+      <br>
+      <strong>Weapon Calculation (Dark Theme)</strong>
+      <br>
+      Weapon simulation using the dark theme.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <img src="screenshots/custom-weapon.png" width="240">
+      <br>
       <strong>Custom Weapon</strong>
-      <br/>
+      <br>
       Create custom weapons by configuring parameters and calculating damage results.
     </td>
+    <td align="center" valign="top">
+      <img src="screenshots/settings.png" width="240">
+      <br>
+      <strong>Settings</strong>
+      <br>
+      Customize application preferences, appearance and sound effects.
+    </td>
+    <td></td>
   </tr>
 </table>
 
@@ -88,7 +114,7 @@ The application was developed independently, covering:
 - Complex calculation algorithms.
 - Android user interface development.
 - Local data management and file handling.
-
+- Theme management (Light / Dark mode).
 
 ## Build Requirements
 
@@ -100,6 +126,14 @@ Minimum Android version:
 
 - Android 8.0 (API 26)
 
+## User Experience
+
+BattleMath provides a modern Material Design interface with:
+
+- Light and Dark themes.
+- Responsive layouts.
+- Intuitive navigation.
+- Immediate visual feedback during gameplay.
 
 ## Development Background
 

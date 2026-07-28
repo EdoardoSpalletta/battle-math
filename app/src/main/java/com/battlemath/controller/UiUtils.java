@@ -25,7 +25,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.battlemath.ActivityWeaponList;
 import com.battlemath.R;
 import com.battlemath.constants.ConstantBM;
 import com.battlemath.constants.Messages;
@@ -219,7 +218,7 @@ public class UiUtils {
     public static int getSelectedRadioButtonId(Context context, RadioGroup selected, String tag) {
         int selectedId = selected.getCheckedRadioButtonId();
         if (selectedId != -1) {
-            RadioButton selectedRB = (RadioButton) ((Activity) context).findViewById(selectedId); // Usa findViewById con il contesto
+            RadioButton selectedRB = ((Activity) context).findViewById(selectedId);
             return getSelectedHitTable(tag, selectedRB);
         } else {
             return -1;

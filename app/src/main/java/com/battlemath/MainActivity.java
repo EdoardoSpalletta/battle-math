@@ -104,9 +104,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
 
-        buttonSettings.setOnClickListener(v -> {
-            showFragment(settingsFragment);
-        });
+        buttonSettings.setOnClickListener(v -> showFragment(settingsFragment));
     }
 
     private void showFragment(Fragment fragment) {

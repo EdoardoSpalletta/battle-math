@@ -1,7 +1,5 @@
 package com.battlemath.fragments;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +11,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.battlemath.R;
 import com.battlemath.constants.ConstantBM;
 import com.battlemath.model.MissionViewModel;
 import com.battlemath.utils.audio.SoundManager;
-import com.battlemath.R;
 
 public class OperationFragment extends Fragment {
 
